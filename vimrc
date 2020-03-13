@@ -1,20 +1,28 @@
 " 
 "        Filename: .vimrc
 "
-"          Author: Lex
+"          Author: Yousit
 "     Description: vim config file
 "          Create: 2019-08-22 11:20
-"   Last Modified: 2020-01-12 18:40
+"   Last Modified: 2020-02-24 20:22
 " 
 
 " 字符集
 set encoding=utf-8
 
+" 中文提示
+language messages zh_CN.utf-8 
+
+" 中文帮助
+set helplang=cn
+
 " 行号
 set number
 
-" 相对行号
-set relativenumber
+" 普通模式下使用绝对行号
+" 插入模式下使用相对行号
+autocmd InsertEnter * :set relativenumber
+autocmd InsertLeave * :set norelativenumber
 
 " 所在行高亮
 set cursorline
@@ -72,8 +80,8 @@ syntax enable
 syntax on
 
 " 主题背景
-" set background=dark
-" colorscheme solarized
+set background=dark
+colorscheme gruvbox
 
 " 自动切换目录
 set autochdir
@@ -113,7 +121,7 @@ noremap u k
 map l <nop>
 
 " 键绑定
-" 插入 命令
+" 插入
 map <F6> i
 
 " 宏绑定
@@ -150,7 +158,11 @@ call vundle#begin()
     Plugin 'vim-airline/vim-airline-themes'           " Airline 的附属主题
     Plugin 'altercation/vim-colors-solarized'         " solarized 主题
     Plugin 'ryanoasis/vim-devicons'                   " vim 图标集
+    Plugin 'VimTweak'					              " vim 背景透明
     Plugin 'vim-scripts/winmanager'                   " WinManager 窗口管理器
+    Plugin 'othree/html5.vim'                         " HTML 自动补全
+    Plugin 'colorizer'                                " CSS 色彩显示
+    Plugin 'suan/vim-instant-markdown'                " Markdown 支持
 call vundle#end()
 filetype plugin indent on
 
@@ -180,10 +192,15 @@ let g:tagbar_left=1
 " WinManager 配置
 let g:winManagerWindowLayout='FileExplorer|TagList'
 
+" Markdown 配置
+" 关闭实时预览
+let g:instant_markdown_slow = 1
 
-
-
-
+" Colorizer 配置
+" 着色方式
+let g:colorizer_fgcontrast = 0
+" 启动时不启用着色
+let g:colorizer_startup = 0
 
 
 

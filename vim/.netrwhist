@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/horizon/.conky/SIT-100'
+let g:netrw_dirhist_5='/home/horizon/.conky'
+let g:netrw_dirhist_4='/home/horizon'
+let g:netrw_dirhist_3='/home/horizon/工作空间/CODE-Workspace/AiL-DTService/DTS'
+let g:netrw_dirhist_2='/home/horizon/工作空间/CODE-Workspace/AiL-DTService'
+let g:netrw_dirhist_1='/home/horizon/工作空间/CODE-Workspace'
+let g:netrw_dirhist_0='/home/horizon/工作空间'
+let g:netrw_dirhist_9='/home/horizon/.config/ranger'
+let g:netrw_dirhist_8='/home/horizon/.vim'
+let g:netrw_dirhist_7='/home/horizon/Github'
