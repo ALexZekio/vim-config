@@ -81,7 +81,7 @@ syntax on
 
 " 主题背景
 set background=dark
-colorscheme gruvbox
+colorscheme solarized
 
 " 自动切换目录
 set autochdir
